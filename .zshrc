@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/derek/.oh-my-zsh"
+export ZSH="/Users/derek-meulmeester/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,6 +111,16 @@ alias db-migrate="rails db:migrate RAILS_ENV=development"
 alias run="DISABLE_PEEK=1 dev server"
 alias git-clean-br="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 
+# Core stuff
+alias copme='dev style --include-branch-commits'
+alias typeme='bin/srb typecheck'
+alias dumpme='dev dump-graphql admin'
+alias packme='dev packages check'
+
+recastme() {
+  dev rbi dsl $1
+}
+
 port_process() {
   lsof -n -i4TCP:$1 | grep LISTEN
 }
@@ -120,8 +130,9 @@ kill_process() {
 }
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-if [ -e /Users/derek/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/derek/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
 [[ -x /usr/local/bin/brew ]] && eval $(/usr/local/bin/brew shellenv)
+
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
