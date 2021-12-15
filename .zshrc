@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
@@ -19,7 +19,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 alias rake="bundle exec rake"
 alias be="bundle exec"
-alias db-migrate="rails db:migrate RAILS_ENV=development"
+alias db-migrate="bin/rails db:migrate RAILS_ENV=development"
 alias run="DISABLE_PEEK=1 dev server"
 alias git-clean-br="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 
