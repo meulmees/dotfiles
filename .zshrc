@@ -28,6 +28,7 @@ alias copme='dev style --include-branch-commits'
 alias typeme='bin/srb typecheck'
 alias dumpme='dev dump-graphql admin'
 alias packme='dev packages check'
+alias sql='mysql -u root -P "$MYSQL_PORT"'
 
 recastme() {
   dev rbi dsl $1
