@@ -29,6 +29,7 @@ alias typeme='bin/srb typecheck'
 alias dumpme='dev dump-graphql admin'
 alias packme='dev packages check'
 alias sql='mysql -u root -P "$MYSQL_PORT"'
+alias fix_bundler='bundle config --global PKGS__SHOPIFY__IO "token:$(gsutil cat gs://dev-tokens/cloudsmith/shopify/gems/latest)"'
 
 recastme() {
   dev rbi dsl $1
