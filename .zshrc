@@ -32,6 +32,9 @@ alias sql='mysql -u root -P "$MYSQL_PORT"'
 alias fix_bundler='bundle config --global PKGS__SHOPIFY__IO "token:$(gsutil cat gs://dev-tokens/cloudsmith/shopify/gems/latest)"'
 alias fix_dev='source /opt/minidev/dev.sh'
 
+# Spin
+alias spin-create-lite='spin create shopify,web --no-aliases'
+
 recastme() {
   dev rbi dsl $1
 }
