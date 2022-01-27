@@ -34,6 +34,7 @@ alias fix_dev='source /opt/minidev/dev.sh'
 
 # Spin
 alias spin-create-lite='spin create shopify,web --no-aliases'
+alias stop-shopify='systemctl stop proc-shopify--shopify@server.service'
 
 recastme() {
   dev rbi dsl $1
