@@ -33,6 +33,7 @@ alias fix_bundler='bundle config --global PKGS__SHOPIFY__IO "token:$(gsutil cat 
 alias fix_dev='source /opt/minidev/dev.sh'
 
 # Spin
+alias spin='spin2'
 alias spin-create-lite='spin create shopify,web --no-aliases'
 alias stop-shopify='systemctl stop proc-shopify--shopify@server.service'
 
